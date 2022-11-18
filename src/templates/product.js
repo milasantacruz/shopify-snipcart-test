@@ -12,7 +12,11 @@ const ProductTemplate = ({ pageContext }) => {
   const { addVariantToCart } = useStore()
   const bind = useInput(1)
 
-  var local = window?window.location.pathname:null
+  var local = null;
+
+  if(window){
+    local = window?.location.pathname;
+  }
   //console.log(window?.location.pathname)
   return (
     <Layout>
