@@ -11,7 +11,7 @@ const ProductTemplate = ({ pageContext }) => {
   const { product } = pageContext
   const { addVariantToCart } = useStore()
   const bind = useInput(1)
-  console.log(window.location)
+ // console.log(window.location)
   return (
     <Layout>
       <BackButton onClick={() => navigate(-1)}>{"< "} Back</BackButton>
