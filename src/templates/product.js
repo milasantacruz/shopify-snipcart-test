@@ -11,7 +11,9 @@ const ProductTemplate = ({ pageContext }) => {
   const { product } = pageContext
   const { addVariantToCart } = useStore()
   const bind = useInput(1)
-  console.log(window?.location.pathname)
+
+  var local = window?window.location.pathname:null
+  //console.log(window?.location.pathname)
   return (
     <Layout>
       <BackButton onClick={() => navigate(-1)}>{"< "} Back</BackButton>
@@ -29,7 +31,7 @@ const ProductTemplate = ({ pageContext }) => {
           <button className="snipcart-add-item"
             data-item-id={product.title.split(' ').join('_').toLowerCase()}
             data-item-price={product.priceRangeV2.maxVariantPrice.amount}
-            data-item-url={window?.location.pathname}
+            data-item-url={local}
             data-item-description={product.description}
             data-item-image=""
             data-item-name={product.title}>
