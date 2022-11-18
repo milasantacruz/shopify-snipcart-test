@@ -42,7 +42,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-snipcartv3',
       options: {
-        apiKey: 'YOUR_SNIPCART_KEY'
+        apiKey: process.env.YOUR_SNIPCART_KEY
       }
     }
   ],

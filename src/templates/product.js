@@ -16,7 +16,8 @@ const ProductTemplate = ({ pageContext }) => {
 
  useEffect(()=>{
   if(window){
-    local = window?.location.pathname;
+    local = window.location.pathname;
+    console.log(local)
   }else{
     return
   }
