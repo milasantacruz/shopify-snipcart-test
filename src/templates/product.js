@@ -38,7 +38,7 @@ const ProductTemplate = ({ pageContext }) => {
           </InputForm>
           {/* <PrimaryButton text="Add to cart" onClick={() => addVariantToCart(product, bind.value)} /> */}
           <button className="snipcart-add-item"
-            data-item-id={product.title.split(' ').join('_').toLowerCase()}
+            data-item-id={product.title.split(' ').join('_').toUpperCase()}
             data-item-price={product.priceRangeV2.maxVariantPrice.amount}
             data-item-url={local}
             data-item-description={product.description}
