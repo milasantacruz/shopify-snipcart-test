@@ -14,9 +14,13 @@ const ProductTemplate = ({ pageContext }) => {
 
   var local = null;
 
+ useEffect(()=>{
   if(window){
     local = window?.location.pathname;
+  }else{
+    return
   }
+ },[])
   //console.log(window?.location.pathname)
   return (
     <Layout>
