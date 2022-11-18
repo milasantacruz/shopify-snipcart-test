@@ -11,7 +11,7 @@ const ProductTemplate = ({ pageContext }) => {
   const { product } = pageContext
   const { addVariantToCart } = useStore()
   const bind = useInput(1)
- // console.log(window.location)
+  console.log(window?.location.pathname)
   return (
     <Layout>
       <BackButton onClick={() => navigate(-1)}>{"< "} Back</BackButton>
@@ -26,15 +26,15 @@ const ProductTemplate = ({ pageContext }) => {
             <Input placeholder="1" id="qty" type="number" {...bind} />
           </InputForm>
           {/* <PrimaryButton text="Add to cart" onClick={() => addVariantToCart(product, bind.value)} /> */}
-          {/* <button class="snipcart-add-item"
+          <button className="snipcart-add-item"
             data-item-id={product.title.split(' ').join('_').toLowerCase()}
             data-item-price={product.priceRangeV2.maxVariantPrice.amount}
-            data-item-url="/paintings/starry-night"
-            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
-            data-item-image="/assets/images/starry-night.jpg"
-            data-item-name="The Starry Night">
+            data-item-url={window?.location.pathname}
+            data-item-description={product.description}
+            data-item-image=""
+            data-item-name={product.title}>
             Add to cart
-          </button> */}
+          </button>
         </InfoContainer>
       </Wrapper>
     </Layout>
